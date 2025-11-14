@@ -6,17 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    /* Base */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html, body {
       height: 100%;
     }
-
     body {
       font-family: Verdana, Geneva, sans-serif;
       background: radial-gradient(circle at top left, #a7c4a0 0, #1e2c24 40%, #101712 100%);
@@ -27,14 +24,12 @@
       overflow: hidden;
     }
 
-    /* Background accents */
     .hero {
       position: relative;
       width: 100%;
       max-width: 1200px;
       padding: 40px 20px;
     }
-
     .hero::before,
     .hero::after {
       content: "";
@@ -44,7 +39,6 @@
       opacity: 0.45;
       z-index: 0;
     }
-
     .hero::before {
       width: 320px;
       height: 320px;
@@ -52,7 +46,6 @@
       top: -80px;
       left: -60px;
     }
-
     .hero::after {
       width: 260px;
       height: 260px;
@@ -61,7 +54,6 @@
       right: 0;
     }
 
-    /* Main card */
     .card {
       position: relative;
       z-index: 1;
@@ -75,33 +67,28 @@
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
     }
-
     .card-left,
     .card-right {
       padding: 40px;
       min-width: 280px;
     }
-
     .card-left {
       flex: 1 1 55%;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-
     .card-right {
       flex: 1 1 45%;
       position: relative;
       background: radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 60%);
     }
 
-    /* Logo + heading */
     .logo-row {
       margin-bottom: 30px;
     }
-
     .logo-row img {
-      height: 46px;        /* adjust if needed */
+      height: 46px;
       display: block;
     }
 
@@ -113,7 +100,6 @@
       color: #d6e3d1;
       opacity: 0.9;
     }
-
     .title {
       font-size: 46px;
       line-height: 1.1;
@@ -121,13 +107,11 @@
       margin-bottom: 14px;
       color: #ffffff;
     }
-
     .subtitle {
       font-size: 18px;
       color: #d7e1d5;
       margin-bottom: 30px;
     }
-
     .accent-line {
       width: 70px;
       height: 3px;
@@ -136,7 +120,6 @@
       border-radius: 999px;
     }
 
-    /* Button */
     .cta-btn {
       display: inline-block;
       padding: 15px 36px;
@@ -153,7 +136,6 @@
       transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.15s ease;
       cursor: pointer;
     }
-
     .cta-btn:hover,
     .cta-btn:focus {
       filter: brightness(1.06);
@@ -162,7 +144,6 @@
       text-decoration: none;
     }
 
-    /* Right image */
     .image-wrapper {
       position: relative;
       height: 100%;
@@ -171,7 +152,6 @@
       align-items: center;
       justify-content: center;
     }
-
     .image-frame {
       width: 100%;
       max-width: 360px;
@@ -180,14 +160,12 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
     }
-
     .image-frame img {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
     }
-
     .image-badge {
       position: absolute;
       bottom: 26px;
@@ -202,52 +180,41 @@
       border: 1px solid rgba(220, 236, 209, 0.6);
     }
 
-    /* Responsive */
     @media (max-width: 900px) {
       body {
         align-items: flex-start;
         padding-top: 30px;
       }
-
       .card {
         flex-direction: column;
       }
-
       .card-left,
       .card-right {
         padding: 28px 24px 32px;
       }
-
       .title {
         font-size: 36px;
       }
-
       .subtitle {
         font-size: 16px;
       }
-
       .image-badge {
         left: 26px;
       }
     }
-
     @media (max-width: 600px) {
       .hero {
         padding: 20px 12px;
       }
-
       .image-wrapper {
         min-height: 210px;
       }
-
       .image-frame {
         max-width: 100%;
       }
-
       .logo-row img {
         height: 40px;
       }
-
       .title {
         font-size: 30px;
       }
@@ -259,33 +226,30 @@
 
   <div class="hero">
     <div class="card">
-      <!-- LEFT SIDE: Text -->
       <div class="card-left">
         <div class="logo-row">
-          <!-- Replace this src with your real NOVAXIA logo URL -->
+          <!-- Replace with real NOVAXIA logo if you want -->
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg"
                alt="NOVAXIA Logo">
         </div>
 
         <div class="eyebrow">Property investment materials</div>
-
         <div class="title">Thank you!</div>
-
         <div class="subtitle">Your submission has been recorded.</div>
-
         <div class="accent-line"></div>
 
-        <!-- JotForm will inject the real PDF link in {pdfUrl} -->
-     <a id="download-btn" class="cta-btn" href="#" target="_blank" rel="noopener noreferrer">
-        Download PDF
-     </a>
+        <a id="download-btn"
+           class="cta-btn"
+           href="#"
+           target="_blank"
+           rel="noopener noreferrer">
+          Download PDF
+        </a>
+      </div>
 
-
-      <!-- RIGHT SIDE: Decorative image -->
       <div class="card-right">
         <div class="image-wrapper">
           <div class="image-frame">
-            <!-- You can replace this image with one that fits your brand -->
             <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
                  alt="Team reviewing investment materials">
           </div>
@@ -298,14 +262,26 @@
   </div>
 
   <script>
-  const params = new URLSearchParams(window.location.search);
-  const pdfUrl = params.get("pdfUrl");
+    // Read URL parameters
+    const params = new URLSearchParams(window.location.search);
+    let pdfUrl = params.get("pdfUrl");
+    const driveId = params.get("id");
 
-  if (pdfUrl) {
-    const btn = document.getElementById("download-btn");
-    btn.href = decodeURIComponent(pdfUrl);
-  }
-</script>
+    // If Drive ID is separate and not included in pdfUrl, rebuild it
+    if (pdfUrl && driveId && !pdfUrl.includes("id=")) {
+      if (!pdfUrl.includes("?")) {
+        pdfUrl += "?id=" + encodeURIComponent(driveId);
+      } else {
+        pdfUrl += "&id=" + encodeURIComponent(driveId);
+      }
+    }
+
+    // Apply to button if available
+    if (pdfUrl) {
+      const btn = document.getElementById("download-btn");
+      btn.href = decodeURIComponent(pdfUrl);
+    }
+  </script>
 
 </body>
 </html>
