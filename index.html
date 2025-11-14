@@ -5,7 +5,7 @@
   <title>Thank You | NOVAXIA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Optional: Bootstrap for basic resets & responsiveness -->
+  <!-- Optional Bootstrap (for layout consistency) -->
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -15,7 +15,7 @@
       padding: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
       background-color: #f4f5f7;
-      color: #333;
+      color: #333333;
     }
 
     .thankyou-wrapper {
@@ -39,13 +39,12 @@
 
     .thankyou-content {
       flex: 1 1 55%;
-      background-color: #7b8f57; /* olive green */
+      background-color: #7b8f57; /* Olive green */
       color: #ffffff;
       padding: 45px 50px;
       position: relative;
     }
 
-    /* angled shape effect */
     .thankyou-content::after {
       content: "";
       position: absolute;
@@ -90,14 +89,14 @@
       display: inline-block;
       padding: 12px 30px;
       border-radius: 999px;
-      border: none;
-      background-color: #f2b633; /* warm yellow, like your Canva button */
+      background-color: #f2b633; /* Button yellow */
       color: #1f2f3a;
       font-weight: 700;
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 1px;
       text-decoration: none;
+      border: none;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
       transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
     }
@@ -112,8 +111,8 @@
 
     .thankyou-image {
       flex: 1 1 45%;
-      position: relative;
       min-height: 260px;
+      position: relative;
     }
 
     .thankyou-image img {
@@ -122,7 +121,7 @@
       object-fit: cover;
     }
 
-    /* mobile layout */
+    /* Mobile layout */
     @media (max-width: 768px) {
       .thankyou-card {
         flex-direction: column;
@@ -147,35 +146,42 @@
     }
   </style>
 </head>
+
 <body>
 
 <div class="thankyou-wrapper">
   <div class="thankyou-card">
+
     <div class="thankyou-content">
       <div class="thankyou-eyebrow">Thank you!</div>
-      <h1 class="thankyou-title">Your response<br>has been recorded.</h1>
+
+      <h1 class="thankyou-title">
+        Your response<br>has been recorded.
+      </h1>
+
       <div class="thankyou-subtitle">
-        Your personalised NOVAXIA material is now ready.
+        Your personalised NOVAXIA document is ready.
       </div>
+
       <p class="thankyou-text">
-        Click the button below to access your presentation. You can download it
-        as a PDF and share it with your partners or keep it for your records.
+        Click the button below to download your presentation.  
+        You can save it as a PDF or share it with your partners.
       </p>
 
-      <!-- JotForm will replace {pdfUrl} with the actual link -->
+      <!-- JotForm replaces {pdfUrl} dynamically -->
       <a class="btn-novaxia"
          href="{pdfUrl}"
          target="_blank"
          rel="noopener noreferrer">
-        Download presentation →
+        Download Presentation →
       </a>
     </div>
 
     <div class="thankyou-image">
-      <!-- Replace this with your own hosted image URL if you like -->
       <img src="https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg"
-           alt="Team working at a laptop">
+           alt="Team working together">
     </div>
+
   </div>
 </div>
 
